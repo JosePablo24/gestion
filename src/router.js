@@ -6,6 +6,7 @@ import InformacionAlumno from './components/Alumno/InformacionAlumno.vue'
 import FormularioAlumno from './components/Alumno/FormularioAlumno.vue'
 import nav from './components/navBar/navBar.vue'
 import EditarAlumno from './components/Alumno/EditarAlumno.vue'
+import inforTabla from './components/Alumno/InforTabla.vue'
 
 Vue.use(VueRouter)
 
@@ -42,6 +43,10 @@ export default new VueRouter({
           name: "nav",
           component: nav
         },
-        
+        {
+          path: "/informacionTabla",
+          name: "inforTabla",
+          component: inforTabla
+        }, 
         
     ]});
