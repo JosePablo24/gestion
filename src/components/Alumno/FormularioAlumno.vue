@@ -21,7 +21,7 @@
                 
                 <v-card-actions>
                     <v-btn class="button" color="primary" type="submit" dark large> Save </v-btn>
-                    <v-btn class="button" color="error" href="/informacionAlumno" dark large> Cancel </v-btn>
+                    <v-btn class="button" color="error" href="/informacionTabla" dark large> Cancel </v-btn>
                 </v-card-actions>                                
                 
             </v-form>      
@@ -76,7 +76,7 @@
                         carrera: this.carrera,
 
                     }).then(response => {
-                        this.$router.push('/informacionAlumno')
+                        this.$router.push('/informacionTabla')
                         
                     }).catch(e => {console.error(e)
                     })

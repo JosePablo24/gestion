@@ -2,7 +2,7 @@
     <div>
         <v-toolbar app style="background-color:#27ABB6">                 
           <v-toolbar-title class="headline text-uppercase">
-                <router-link to="/informacionAlumno" style="text-decoration: none;color: white;">
+                <router-link to="/informacionTabla" style="text-decoration: none;color: white;">
                     <span>Gestion de </span>
                      <span class="font-weight-light">Alumnos</span>
                 </router-link>

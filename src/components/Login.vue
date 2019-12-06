@@ -1,5 +1,5 @@
 <template>  
-  <div>
+  <div class="id">
   
     <v-row justify="center" align="center">
       <v-col cols="12" sm="10" md="8" lg="6">
@@ -52,10 +52,18 @@ import { log } from 'util';
             password: this.password
           }).then((response)=>{
             console.log(response.data.token);            
-            this.$router.push({path: '/informacionAlumno'})         
+            this.$router.push({path: '/informacionTabla'})         
             localStorage.setItem( 'token',response.data.token)
           })
         }
     }
   }
 </script>
+
+<style>
+id{
+  background-color: aqua;
+    display: inline-block;
+    text-align: center;
+}
+</style>

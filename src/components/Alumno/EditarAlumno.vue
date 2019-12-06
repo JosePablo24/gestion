@@ -21,7 +21,7 @@
                 
                 <v-card-actions>
                     <v-btn class="button" color="primary" type="submit" dark large> Save </v-btn>
-                    <v-btn class="button" color="error" href="/informacionAlumno" dark large> Cancel </v-btn>
+                    <v-btn class="button" color="error" href="/informacionTabla" dark large> Cancel </v-btn>
                 </v-card-actions>                                
                 
             </v-form>      
@@ -65,28 +65,32 @@
             }),
 
         methods:{
-                submit(){                                
+                submit(){  
+                    var id = this.$route.params.id
     // //                if (this.name != false && this.sexo != false&& this.carrera != false && this.select != false && this.address != false) {                    
-                        API.put(`/alumno/alumno_detail/${this.informacion.id}`,{
+                        API.put(`/alumno/alumno_detail/`+ id,{
                             name: this.name,
                             lastname: this.lastName,
                             direccion: this.address,
                             sexo: this.sexo,
                             edad: this.edad,                        
                             matricula: this.matricula,
+                            carrera: this.carrera,
                      }).then(response => {
-                        this.$router.push('/informacionAlumno');
+                        this.$router.push('/informacionTabla');
                     })         
                  }
             },
-        mounted(){
+        mounted(){                        
             API.get('alumno/alumno_detail/'+this.$route.params.id).then(response => {
-                console.log(response.data);
-                
-                this.informacion = response.data
-                console.log(this.informacion.id);
-                
-                
+                console.log(response.data.name);                
+                this.name = response.data.name
+                this.lastName = response.data.lastname
+                this.address = response.data.direccion
+                this.sexo = response.data.sexo
+                this.matricula = response.data.matricula
+                this.edad = response.data.edad
+                this.carrera = response.data.carrera                                                
             })
 
         },
