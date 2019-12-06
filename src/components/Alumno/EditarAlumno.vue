@@ -86,11 +86,8 @@
                 console.log(response.data.name);                
                 this.name = response.data.name
                 this.lastName = response.data.lastname
-                this.address = response.data.direccion
-                this.sexo = response.data.sexo
-                this.matricula = response.data.matricula
-                this.edad = response.data.edad
-                this.carrera = response.data.carrera                                                
+                this.address = response.data.direccion                
+                this.matricula = response.data.matricula                                                        
             })
 
         },
