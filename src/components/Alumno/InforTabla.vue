@@ -77,7 +77,7 @@
                                 </v-list>
                             </v-menu>
                             <v-spacer></v-spacer>          
-                            <v-btn class="mx-2" fab dark color="indigo" href="/formularioAlumno" style="align: right">
+                            <v-btn class="mx-2" fab dark color="indigo" @click="$router.push(`formularioAlumno/`)" style="align: right">
                                 <v-icon dark>mdi-plus</v-icon>
                             </v-btn>      
                             <span class="mr-4 grey--text" >
